@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/wizard_navigation"
+            app:startDestination="@id/leftStart">
+
+  <fragment android:id="@+id/leftStart"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentStart"
+            android:label="LEFT"
+            tools:layout="@layout/left_fragment_start">
+    <action
+        android:id="@+id/action_to_step2"
+        app:destination="@id/leftSecond"/>
+  </fragment>
+  <fragment android:id="@+id/leftSecond"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentSecond"
+            android:label="LEFT 2"
+            tools:layout="@layout/left_fragment_second">
+    <action android:id="@+id/action_to_step3"
+            app:destination="@id/leftThird"/>
+  </fragment>
+  <fragment android:id="@+id/leftThird"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentThird"
+            android:label="LEFT 3"
+            tools:layout="@layout/left_fragment_third">
+    <deepLink
+        android:id="@+id/deepLink"
+        app:uri="wizard://www.max.com"
+    />
+  </fragment>
+  <fragment android:id="@+id/centerStart"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentStart"
+            android:label="CENTER"
+            tools:layout="@layout/center_fragment_start">
+    <action android:id="@+id/center_action_to_step2"
+            app:destination="@id/centerSecond"/>
+  </fragment>
+  <fragment android:id="@+id/centerSecond"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentSecond"
+            android:label="CENTER 2"
+            tools:layout="@layout/center_fragment_second">
+    <action android:id="@+id/center_action_to_step3"
+            app:destination="@id/centerThird"/>
+    <argument android:name="firstText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+  </fragment>
+  <fragment android:id="@+id/centerThird"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentThird"
+            android:label="CENTER 3"
+            tools:layout="@layout/center_fragment_third">
+    <argument android:name="firstText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+    <argument android:name="secondText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+  </fragment>
+  <fragment android:id="@+id/rightStart" android:name="uk.co.massimocarli.wizardapp.RightFragmentStart"
+            android:label="right_fragment_start" tools:layout="@layout/right_fragment_start"/>
+</navigation>

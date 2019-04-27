@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/wizard_navigation"
+            app:startDestination="@id/leftStart">
+
+  <fragment android:id="@+id/leftStart"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentStart"
+            android:label="LEFT"
+            tools:layout="@layout/left_fragment_start">
+    <action
+        android:id="@+id/action_to_step2"
+        app:destination="@id/leftNavigation"/>
+  </fragment>
+  <fragment android:id="@+id/centerStart"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentStart"
+            android:label="CENTER"
+            tools:layout="@layout/center_fragment_start">
+    <action android:id="@+id/center_action_to_step2"
+            app:destination="@id/centerNavigation"/>
+  </fragment>
+  <include app:graph="@navigation/left_navigation"/>
+  <include app:graph="@navigation/center_navigation"/>
+</navigation>

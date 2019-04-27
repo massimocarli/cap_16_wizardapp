@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             tools:context=".LeftFragmentSecond">
+  <EditText
+      android:textSize="@dimen/input_text_size"
+      android:id="@+id/inputText"
+      android:hint="@string/insert_second_value_hint"
+      android:layout_gravity="top"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+  <Button
+      android:gravity="center"
+      android:textSize="@dimen/button_text_size"
+      android:layout_gravity="center"
+      android:id="@+id/nextStepButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/go_to_step_3"/>
+  <TextView
+      android:textSize="@dimen/output_text_size"
+      android:id="@+id/outputText"
+      tools:text="HERE WE HAVE THE OUTPUT"
+      android:layout_gravity="bottom"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+</FrameLayout>

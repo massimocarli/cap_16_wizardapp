@@ -1,0 +1,19 @@
+<resources>
+  <string name="app_name">WizardApp</string>
+  <string name="left_menu_item">LEFT</string>
+  <string name="right_menu_item">RIGHT</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="go_to_step_2">GO TO STEP 2</string>
+  <string name="go_to_step_3">GO TO STEP 3</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="step_3">STEP 3</string>
+  <string name="center_menu_item">CENTER</string>
+  <string name="insert_first_value_hint">Insert first value</string>
+  <string name="insert_second_value_hint">Insert second value</string>
+  <string name="launch_deep_link_notification">Launch Deep Link Notification</string>
+  <string name="channel_name">DeepLinkChannel</string>
+  <string name="channel_description">This is the channel for the notification</string>
+</resources>

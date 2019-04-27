@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/leftNavigation"
+            app:startDestination="@id/leftSecond"
+            android:label="leftGraph">
+  <fragment android:id="@+id/leftSecond"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentSecond"
+            android:label="LEFT 2"
+            tools:layout="@layout/left_fragment_second">
+    <action android:id="@+id/action_to_step3"
+            app:destination="@+id/leftThird"/>
+  </fragment>
+  <fragment android:id="@+id/leftThird"
+            android:name="uk.co.massimocarli.wizardapp.LeftFragmentThird"
+            android:label="LEFT 3"
+            tools:layout="@layout/left_fragment_third"/>
+</navigation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/centerNavigation"
+            app:startDestination="@id/centerSecond" android:label="centerGraph">
+  <fragment android:id="@+id/centerSecond"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentSecond"
+            android:label="CENTER 2"
+            tools:layout="@layout/center_fragment_second">
+    <action android:id="@+id/center_action_to_step3"
+            app:destination="@id/centerThird"/>
+    <argument android:name="firstText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+  </fragment>
+  <fragment android:id="@+id/centerThird"
+            android:name="uk.co.massimocarli.wizardapp.CenterFragmentThird"
+            android:label="CENTER 3"
+            tools:layout="@layout/center_fragment_third">
+    <argument android:name="firstText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+    <argument android:name="secondText"
+              app:argType="string"
+              android:defaultValue="NONE"/>
+  </fragment>
+</navigation>
